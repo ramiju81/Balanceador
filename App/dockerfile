@@ -1,0 +1,19 @@
+# usa la imagen de base de NodeList.js
+FROM node:latest
+
+#Establece el directorio de trabajo
+WORKDIR /app
+
+#Copia el archivo de la aplicacion 
+COPY package.json .
+COPY server.js .
+
+#Instala las dependencias de la aplicacion
+RUN npm install
+
+#Exponer el puerto en el que se ejecutara la aplicacion
+EXPOSE 3033
+
+#Comando para iniciar la aplicacion
+CMD ["node", "server.js"]    
+
