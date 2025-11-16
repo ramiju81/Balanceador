@@ -63,10 +63,10 @@ services:
       - app8
       - app9
 
-  cadvisor:
-    image: gcr.io/cadvisor/cadvisor:latest
-    container_name: cadvisor1
-    ports:
-      - "8889:8080"
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock:ro
+  # cadvisor:
+  #   image: gcr.io/cadvisor/cadvisor:latest
+  #   container_name: cadvisor1
+  #   ports:
+  #     - "8889:8080"
+  #   volumes:
+  #     - /var/run/docker.sock:/var/run/docker.sock:ro
